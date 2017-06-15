@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include ../partials/head.ejs %>
+    </head>
+    <body>
+    <header>
+        <%- include ../partials/header.ejs %>
+    </header>
+      <div class="container">  
+   <h1>Contact</h1>
+   <form method="post" action="contact/send">
+   <div class="form-group">
+   <label>Name</label>
+   <input type="text" class='form-control' name="name" placeholder="Enter Your name">
+     <label>Email</label>
+     <input class='form-control' type="email" name="Email" placeholder="Enter your Email...">
+   </div>
+   <div class="form-group">
+   <label>Message</label>
+   <input type="textarea" class='form-control' name="message" placeholder="Enter your message"></textarea>
+     
+   </div>
+   <button class="btn btn-default btn-lg" type="submit">Submit</button>
+     
+   </form>
+   
+   </div>
+    </body>
+    <footer>
+        <%- include ../partials/footer.ejs %> 
+    </footer>
+</html>
