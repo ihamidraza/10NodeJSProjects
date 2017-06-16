@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<%- include ../partials/head.ejs %>
+	</head>
+	<body>
+
+		<%- include ../partials/header.ejs %>
+		<div class="container col-md-4">
+
+		<h1>Register</h1>
+		<p>Please Register Using The Form Below.</p>
+		<ul class="errors">
+					
+			<% if (errors){ %>
+
+
+				<% errors.forEach(function(errors){ %>
+					<li class="alert alert-danger">
+			<%= errors.msg %>
+			</li>
+
+			<%	}); %>
+
+		<%	} %>	
+			</li>
+
+		</ul>
+		<div class="container">
+		<form method="post" action="/users/register" enctype="multipart/form-data">
+		<div class="form-group">
+			<label >Name</label>
+			<input type="text" class="form-control" name="name" placeholder="Enter Your Name">
+		</div>
+		<div class="form-group">
+			<label >Email</label>
+			<input type="email" class="form-control" name="email" placeholder="Enter Your Email">
+		</div>
+		<div class="form-group">
+			<label >Username</label>
+			<input type="text" class="form-control" name="username" placeholder="Enter A Username">
+		</div>
+		<div class="form-group">
+			<label >Password</label>
+			<input type="password" class="form-control" name="password" placeholder="Enter Password">
+		</div>
+		<div class="form-group">
+			<label >Confirm Password</label>
+			<input type="password" class="form-control" name="password2" placeholder="Confirm Password">
+		</div>
+		<div class="form-group">
+			<label >Profile Image</label>
+			<input type="file" class="form-control" name="profileimage">
+		</div>
+		<input type="submit" class="btn btn-default "  value="Register"></form>
+
+</div>
+</div>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	</body>
+	</body>
+</html>
