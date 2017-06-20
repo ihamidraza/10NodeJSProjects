@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<%- include ../partials/head.ejs %>
+</head>
+
+<body>
+
+	<%- include ../partials/header.ejs %>
+		<div class="container">
+			<% if(posts.length > 0){ for (var i = 0; i < posts.length; i++) { %>
+				<div class="post">
+					<h1>
+						<a href="/posts/show/<%= posts[i]._id %>">
+							<%=posts[i].title%>
+						</a>
+					</h1>
+					<p class="meta">Posted in
+					<a href="/categories/show/<%= posts[i].category %>"><%= posts[i].category %></a> on
+							<%= moment( posts[i].date).format('DD-MM-YY') %>
+					</p>
+					<img src="/images/uploads/<%= posts[i].mainimage %>" alt="Main Image">
+					<p>
+						<%= truncateText(posts[i].body, 200) %>
+					</p>
+					<a href="/posts/show/<%= posts[i]._id %>" class="more"> Read More </a></div>
+
+				<% } %>
+
+				<%} else {%>
+					<p> There are No Posts to Display </p>
+
+					<% } %>
+
+		</div>
+</body>
+<footer>
+	<%- include ../partials/footer.ejs %>
+</footer>
+
+</html>

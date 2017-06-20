@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <%- include ../partials/head.ejs %>
+    </head>
+    <body>
+        <%- include ../partials/header.ejs %>
+        <div class="container">
+            <div class="post">
+                <h1><%= post.title %></h1>
+                <p class="meta">Posted in
+					<a href="/categories/show/<%= post.category %>"><%= post.category %></a> on
+							<%= moment( post.date).format('DD-MM-YY') %>
+					</p>
+					<img src="/uploads/<%= post.mainimage %>" alt="Main Image">
+					<p>
+						<%= post.body %>
+					</p>
+            </div>
+            <br>
+            <hr>
+            <% if(post.comments){ %>
+                <h3>Comments</h3>
+                <% for(var i=0; i< post.comments.length;i++){ %>
+                <div class="comment">
+                    <p class="comment-name"><%= post.comments[i].name %></p>
+                    <p class="comment-text"><%= post.comments[i].body %></p>
+                </div>
+
+                 <% }} %>
+                 <h3>Add Comment</h3>
+                 <ul class="errors">
+                 
+                    </ul>
+                    <form action="/posts/addcomment" method="post" class="comment">
+                    <input type="hidden" name="postid" value="<%= post._id %>">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input class="form-control" type="text" name="name">
+                    </div>
+                    <div class="form-group">
+                        <label>Email</label>
+                        <input class="form-control" type="email" name="email">
+                    </div>
+                    <div class="form-group">
+                        <label>Body</label>
+                        <textarea class="form-control" name="body" id="body" ></textarea>
+                    </div>
+                    <br>
+                    <input class="btn btn-default" type="submit" name="submit" value="Add Comment">
+                    </form>
+
+
+        </div>
+    </body>
+    <footer>
+        <%- include ../partials/footer.ejs %>
+    </footer>
+</html>

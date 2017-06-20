@@ -1,0 +1,24 @@
+<html>
+	<head>
+	<%- include ../partials/head.ejs %>
+	</head>
+	<body>
+
+		<%- include ../partials/header.ejs %>
+		<div class="container">
+			<ul class="errors">
+                
+
+</ul>
+<form class="" action="/categories/add" method="post" enctype="multipart/form-data">
+	<div class="form-group">
+		<label>Title</label>
+		<input class="form-control" type="text" name="title" placeholder="Title">
+	</div>
+<input class="btn btn-success" type="submit" name="submit" value="Add">
+</form>
+</body>
+<footer>
+	<%- include ../partials/footer.ejs %>
+</footer>
+</html>
