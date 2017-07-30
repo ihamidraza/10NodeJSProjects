@@ -1,0 +1,55 @@
+.top-bar {
+    background: #000;
+    margin-bottom: 20px;
+}
+
+.top-bar-left ul {
+    background: #000;
+}
+
+.top-bar-left ul li,
+.top-bar-left ul li a {
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 10px;
+    text-align: center;
+}
+
+.book {
+    text-align: center;
+}
+
+.book h4 {
+    margin-top: 15px;
+}
+
+.price {
+    margin: 5px;
+    font-size: 18px;
+}
+
+.price span {
+    color: green;
+    background: #f4f4f4;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 10%;
+}
+
+.column:last-child:not(:first-child),
+.columns:last-child:not(:first-child) {
+    float: left;
+}
+
+h2 span {
+font-size: 15px;
+
+}
