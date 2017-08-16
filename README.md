@@ -1,2 +1,2 @@
 # 10NodeJSProjects
-Install npm packages before ruuning every project.
+Install supporting modules using 'npm install' command before running any project.
