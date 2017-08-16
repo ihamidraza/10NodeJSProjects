@@ -1,0 +1,31 @@
+<h2>New Project</h2>
+{{#if errors}}
+    <div class="alert alert-danger">{{errors}}</div>
+{{/if}}
+<form action="/admin/new" method="post" enctype="multipart/form-data">
+<div class="form-group">
+    <label>Title</label>
+    <input type="text" name="title" class="form-control">
+</div>
+<div class="form-group">
+    <label>Description</label>
+    <textarea name="description" class="form-control"></textarea>
+</div>
+<div class="form-group">
+    <label>Service</label>
+    <input type="text" class="form-control" name="service">
+</div>
+<div class="form-group">
+    <label>Client</label>
+    <input type="text" class="form-control" name="client">
+</div>
+<div class="form-group">
+    <label>Project Image</label>
+    <input type="file" name="projectimage" class="form-control">
+</div>
+<div class="form-group">
+    <label>Date</label>
+    <input type="date" class="form-control" name="projectdate">
+</div>
+<input type="submit" class="btn btn-default" name="submit" value="Submit">
+</form>

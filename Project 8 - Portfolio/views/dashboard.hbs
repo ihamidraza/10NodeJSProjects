@@ -1,0 +1,42 @@
+<h2>Dashboard</h2>
+{{#if errors}}
+    <div class="alert alert-danger">{{errors}}</div>
+{{/if}}
+<br>
+<br>
+<br>
+<table class="table table-striped">
+        <tr>
+            <th>
+                ID
+            </th>
+            <th>
+                Project Name
+            </th>
+            <th>
+                Service
+            </th>
+            <th>
+
+            </th>
+            
+        </tr>
+        {{#each rows}}
+        <tr>
+            <td>
+                {{this.id}}
+            </td>
+            <td>
+                {{this.title}}
+            </td>
+            <td>
+                {{this.service}}
+            </td>
+            <td>
+                <a href="/admin/edit/{{this.id}}" class="btn btn-primary btn-sm">Edit</a>
+                <a href="" class="btn btn-danger btn-sm deleteProject" data-id= "{{this.id}}">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+</table>
+

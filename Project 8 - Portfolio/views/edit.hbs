@@ -1,0 +1,28 @@
+<h2>Edit Project</h2>
+<form action="/admin/edit/{{row.id}}" method="post" enctype="multipart/form-data">
+<div class="form-group">
+    <label>Title</label>
+    <input type="text" name="title" class="form-control" value="{{row.title}}">
+</div>
+<div class="form-group">
+    <label>Description</label>
+    <textarea name="description" class="form-control" >{{row.description}}</textarea>
+</div>
+<div class="form-group">
+    <label>Service</label>
+    <input type="text" class="form-control" name="service" value="{{row.service}}">
+</div>
+<div class="form-group">
+    <label>Client</label>
+    <input type="text" class="form-control" name="client" value="{{row.client}}">
+</div>
+<div class="form-group">
+    <label>Project Image</label>
+    <input type="file" name="projectimage" class="form-control" value="{{row.image}}">
+</div>
+<div class="form-group">
+    <label>Date</label>
+    <input type="date" class="form-control" name="projectdate">
+</div>
+<input type="submit" class="btn btn-default" name="submit" value="Submit">
+</form>
